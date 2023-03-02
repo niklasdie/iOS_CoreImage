@@ -38,11 +38,9 @@ struct ContentView: View {
                 ZStack {
                     Rectangle()
                         .fill(.secondary)
-
                     Text("Tap to select a picture")
                         .foregroundColor(.white)
                         .font(.headline)
-
                     image?
                         .resizable()
                         .scaledToFit()
@@ -122,7 +120,7 @@ struct ContentView: View {
 
     // loads a image from the photos app
     func loadImage() {
-        guard let inputImage = inputImage else { return }
+        guard let inputImage = inputImage else { return } // UIImage
 
         let beginImage = CIImage(image: inputImage)
         choosableFilter.setValue(beginImage, forKey: kCIInputImageKey)
@@ -131,7 +129,7 @@ struct ContentView: View {
 
     // saves the image to the photos app
     func save() {
-        guard let processedImage = processedImage else { return }
+        guard let processedImage = processedImage else { return } // UIImage
 
         let imageSaver = ImageSaver()
 
@@ -172,22 +170,22 @@ struct ContentView: View {
         colorControlsFilter.setValue(contrasteIntensity + 0.5, forKey: kCIInputContrastKey) // 0.5 ... 1.5
                 
         // apply chooseable filter
-        guard let filterImage = choosableFilter.outputImage else { return }
+        guard let filterImage = choosableFilter.outputImage else { return } //CIImage?
         
         // apply hue filter
         hueFilter.setValue(filterImage, forKey: kCIInputImageKey)
-        guard let hueImage = hueFilter.outputImage else { return }
+        guard let hueImage = hueFilter.outputImage else { return } //CIImage?
         
         // apply colorControls filter
         colorControlsFilter.setValue(hueImage, forKey: kCIInputImageKey)
-        guard let outputImage = colorControlsFilter.outputImage else { return }
+        guard let outputImage = colorControlsFilter.outputImage else { return } //CIImage?
 
         // MARK: CIContext
         
         // convert filter to Image and UIImage
-        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
-            let uiImage = UIImage(cgImage: cgimg)
-            image = Image(uiImage: uiImage)
+        if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) /* CGImage? */{
+            let uiImage = UIImage(cgImage: cgimg) //UIImage
+            image = Image(uiImage: uiImage) // Image
             processedImage = uiImage
         }
     }
