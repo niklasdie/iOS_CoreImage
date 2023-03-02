@@ -11,11 +11,9 @@
 		C78D8AC929A272B100243988 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D8AC829A272B100243988 /* ContentView.swift */; };
 		C78D8ACB29A272B300243988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78D8ACA29A272B300243988 /* Assets.xcassets */; };
 		C78D8ACE29A272B300243988 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C78D8ACD29A272B300243988 /* Preview Assets.xcassets */; };
-		C78D8AD029A272B300243988 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D8ACF29A272B300243988 /* Persistence.swift */; };
 		C78D8AD329A272B300243988 /* iOS_CoreImage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C78D8AD129A272B300243988 /* iOS_CoreImage.xcdatamodeld */; };
-		C78D8ADD29A272B300243988 /* iOS_CoreImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D8ADC29A272B300243988 /* iOS_CoreImageTests.swift */; };
-		C78D8AE729A272B300243988 /* iOS_CoreImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D8AE629A272B300243988 /* iOS_CoreImageUITests.swift */; };
-		C78D8AE929A272B300243988 /* iOS_CoreImageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D8AE829A272B300243988 /* iOS_CoreImageUITestsLaunchTests.swift */; };
+		C78D8AF629A27CC700243988 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D8AF529A27CC700243988 /* ImagePicker.swift */; };
+		C78D8AF829A27CD700243988 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78D8AF729A27CD700243988 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +39,12 @@
 		C78D8AC829A272B100243988 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C78D8ACA29A272B300243988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C78D8ACD29A272B300243988 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C78D8ACF29A272B300243988 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		C78D8AD229A272B300243988 /* iOS_CoreImage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_CoreImage.xcdatamodel; sourceTree = "<group>"; };
 		C78D8AD829A272B300243988 /* iOS_CoreImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_CoreImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C78D8ADC29A272B300243988 /* iOS_CoreImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CoreImageTests.swift; sourceTree = "<group>"; };
 		C78D8AE229A272B300243988 /* iOS_CoreImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_CoreImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C78D8AE629A272B300243988 /* iOS_CoreImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CoreImageUITests.swift; sourceTree = "<group>"; };
-		C78D8AE829A272B300243988 /* iOS_CoreImageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CoreImageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C78D8AF529A27CC700243988 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C78D8AF729A27CD700243988 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		C7FBD7FE29A4A75D000C893D /* iOS-CoreImage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "iOS-CoreImage-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				C78D8AC529A272B100243988 /* iOS_CoreImage */,
-				C78D8ADB29A272B300243988 /* iOS_CoreImageTests */,
-				C78D8AE529A272B300243988 /* iOS_CoreImageUITests */,
 				C78D8AC429A272B100243988 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,12 +93,14 @@
 		C78D8AC529A272B100243988 /* iOS_CoreImage */ = {
 			isa = PBXGroup;
 			children = (
+				C7FBD7FE29A4A75D000C893D /* iOS-CoreImage-Info.plist */,
 				C78D8AC629A272B100243988 /* iOS_CoreImageApp.swift */,
 				C78D8AC829A272B100243988 /* ContentView.swift */,
 				C78D8ACA29A272B300243988 /* Assets.xcassets */,
-				C78D8ACF29A272B300243988 /* Persistence.swift */,
 				C78D8AD129A272B300243988 /* iOS_CoreImage.xcdatamodeld */,
 				C78D8ACC29A272B300243988 /* Preview Content */,
+				C78D8AF529A27CC700243988 /* ImagePicker.swift */,
+				C78D8AF729A27CD700243988 /* ImageSaver.swift */,
 			);
 			path = iOS_CoreImage;
 			sourceTree = "<group>";
@@ -114,23 +111,6 @@
 				C78D8ACD29A272B300243988 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		C78D8ADB29A272B300243988 /* iOS_CoreImageTests */ = {
-			isa = PBXGroup;
-			children = (
-				C78D8ADC29A272B300243988 /* iOS_CoreImageTests.swift */,
-			);
-			path = iOS_CoreImageTests;
-			sourceTree = "<group>";
-		};
-		C78D8AE529A272B300243988 /* iOS_CoreImageUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C78D8AE629A272B300243988 /* iOS_CoreImageUITests.swift */,
-				C78D8AE829A272B300243988 /* iOS_CoreImageUITestsLaunchTests.swift */,
-			);
-			path = iOS_CoreImageUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C78D8AD329A272B300243988 /* iOS_CoreImage.xcdatamodeld in Sources */,
-				C78D8AD029A272B300243988 /* Persistence.swift in Sources */,
+				C78D8AF829A27CD700243988 /* ImageSaver.swift in Sources */,
+				C78D8AF629A27CC700243988 /* ImagePicker.swift in Sources */,
 				C78D8AC929A272B100243988 /* ContentView.swift in Sources */,
 				C78D8AC729A272B100243988 /* iOS_CoreImageApp.swift in Sources */,
 			);
@@ -274,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C78D8ADD29A272B300243988 /* iOS_CoreImageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C78D8AE729A272B300243988 /* iOS_CoreImageUITests.swift in Sources */,
-				C78D8AE929A272B300243988 /* iOS_CoreImageUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,11 +406,13 @@
 				DEVELOPMENT_TEAM = 886344HBKQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-CoreImage-Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo with filter applied";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,11 +437,13 @@
 				DEVELOPMENT_TEAM = 886344HBKQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS-CoreImage-Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo with filter applied";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

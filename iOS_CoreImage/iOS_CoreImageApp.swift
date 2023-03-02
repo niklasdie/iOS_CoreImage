@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct iOS_CoreImageApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
 }
